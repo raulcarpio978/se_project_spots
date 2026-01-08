@@ -34,10 +34,6 @@ This webpage is deployed to GitHub Pages
 ![Desktop View](./images/Desktop-View.png)
 ![Mobile View](./images/Mobile-View.png)
 
-## Live Project
-
-🔗 [View the project on GitHub Pages](https://yourusername.github.io/your-project-name/)
-
 ## Project Pitch Video
 
 🎥 [Watch the project pitch](https://www.loom.com/share/c773c09892dc4ae1b389afd1b1111288)
