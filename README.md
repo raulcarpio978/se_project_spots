@@ -40,4 +40,4 @@ This webpage is deployed to GitHub Pages
 
 ## Project Pitch Video
 
-🎥 [Watch the project pitch](https://link-to-your-video.com)
+🎥 [Watch the project pitch](https://www.loom.com/share/c773c09892dc4ae1b389afd1b1111288)
