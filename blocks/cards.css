@@ -1,5 +1,5 @@
 .cards {
-  padding-top: 20px;
+  padding: 20px 0 40px;
   border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
 }
 
@@ -11,7 +11,7 @@
   justify-content: center;
   max-width: 1280px;
   padding: 0;
-  margin: 0 0 34px 0;
+  margin: 0;
 }
 
 @media screen and (max-width: 627px) {
