@@ -22,11 +22,6 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   margin: 0;
-  display: -webkit-box;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
   max-width: 353px;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
@@ -42,11 +37,12 @@
   height: 20px;
   border: none;
   background-color: transparent;
+  cursor: pointer;
+  border: none;
 }
 
 .card__like-btn:hover {
   background-image: url(../images/Heart-Hover-Button.png);
-  cursor: pointer;
 }
 
 @media screen and (max-width: 627px) {

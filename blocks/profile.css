@@ -29,11 +29,12 @@
   font-style: normal;
   font-size: 16px;
   line-height: 1;
+  cursor: pointer;
+  border: none;
 }
 
 .profile__edit-btn:hover {
-  cursor: pointer;
-  opacity: 1;
+ opacity: 1;
 }
 
 .profile__edit-icon {
@@ -48,17 +49,17 @@
   height: 52px;
   width: 149px;
   color: #fcf5e5;
-  gap: 50px;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 16px;
   line-height: 1;
   letter-spacing: 0;
+  cursor: pointer;
+  border: none;
 }
 
 .profile__add-btn:hover {
-  cursor: pointer;
   opacity: 80%;
 }
 
