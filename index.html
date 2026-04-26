@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -134,6 +134,32 @@
       <footer class="footer page__section">
         <p class="footer__text">2025 &copy; Spots</p>
       </footer>
+    </div>
+
+    <div class="modal modal_is-opened">
+      <div class="modal__container">
+        <button class="modal__close-btn" type="button"></button>
+        <h2 class="modal__title">Edit Profile</h2>
+        <form class="modal__form">
+          <label class="modal__label">
+            Name
+            <input
+              type="text"
+              class="modal__input"
+              placeholder="Type your name"
+            />
+          </label>
+          <label class="modal__label">
+            Description
+            <input
+              type="text"
+              class="modal__input"
+              placeholder="Describe yourself"
+            />
+          </label>
+          <button type="submit" class="submit-btn">Save</button>
+        </form>
+      </div>
     </div>
   </body>
 </html>
