@@ -1,81 +1,73 @@
 const profileEditBtn = document.querySelector(".profile__edit-btn");
 const profileAddBtn = document.querySelector(".profile__add-btn");
-const closeBtn = document.querySelectorAll(".modal__close-btn");
-const modals = document.querySelectorAll(".modal");
-const closeEditProfileModal = closeBtn[0];
-const closeNewPostModal = closeBtn[1];
-const editProfileModal = modals[0];
-const newPostModal = modals[1];
 
-const allInputs = document.querySelectorAll(".modal__input");
-const nameInput = allInputs[0];
-const descriptionInput = allInputs[1];
-const imageInput = allInputs[2];
-const captionInput = allInputs[3];
+// Modals
+const editProfileModal = document.querySelector("#edit-profile-modal");
+const newPostModal = document.querySelector("#new-post-modal");
 
+// Close Buttons
+const closeEditProfileModal =
+  editProfileModal.querySelector(".modal__close-btn");
+const closeNewPostModal = newPostModal.querySelector(".modal__close-btn");
+
+// Profile Elements
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
 
-const allForms = document.querySelectorAll(".modal__form");
-const profileFormElement = allForms[0];
-const newPostFormElement = allForms[1];
+// Forms and Scoped Inputs
+const profileFormElement = editProfileModal.querySelector(".modal__form");
+const profileInputs = profileFormElement.querySelectorAll(".modal__input");
+const nameInput = profileInputs[0];
+const descriptionInput = profileInputs[1];
 
+const newPostFormElement = newPostModal.querySelector(".modal__form");
+const newPostInputs = newPostFormElement.querySelectorAll(".modal__input");
+const imageInput = newPostInputs[0];
+const captionInput = newPostInputs[1];
+
+// Centralized helper functions for modals
+function openModal(modal) {
+  modal.classList.add("modal_is-opened");
+}
+
+function closeModal(modal) {
+  modal.classList.remove("modal_is-opened");
+}
+
+// Profile Edit Modal Open
 profileEditBtn.addEventListener("click", function () {
-  editProfileModal.classList.add("modal_is-opened");
+  openModal(editProfileModal);
   nameInput.value = profileName.textContent;
   descriptionInput.value = profileDescription.textContent;
 });
 
+// Profile Edit Form Submission
 profileFormElement.addEventListener("submit", function (evt) {
   evt.preventDefault();
   profileName.textContent = nameInput.value;
   profileDescription.textContent = descriptionInput.value;
-  editProfileModal.classList.remove("modal_is-opened");
+  closeModal(editProfileModal);
 });
 
+// Profile Edit Close Button
 closeEditProfileModal.addEventListener("click", function () {
-  editProfileModal.classList.remove("modal_is-opened");
+  closeModal(editProfileModal);
 });
 
+// New Post Modal Open
 profileAddBtn.addEventListener("click", function () {
-  newPostModal.classList.add("modal_is-opened");
+  openModal(newPostModal);
 });
 
-closeNewPostModal.addEventListener("click", function () {
-  newPostModal.classList.remove("modal_is-opened");
-});
-
-// 1. Profile Edit Form Submission
-profileFormElement.addEventListener("submit", function (evt) {
-  evt.preventDefault();
-  profileName.textContent = nameInput.value;
-  profileDescription.textContent = descriptionInput.value;
-  editProfileModal.classList.remove("modal_is-opened");
-});
-
-// 2. New Post Form Submission
+// New Post Form Submission
 newPostFormElement.addEventListener("submit", function (evt) {
   evt.preventDefault();
   console.log(imageInput.value);
   console.log(captionInput.value);
-  newPostModal.classList.remove("modal_is-opened");
+  closeModal(newPostModal);
 });
 
-// 3. Modal Open / Close Buttons
-profileEditBtn.addEventListener("click", function () {
-  editProfileModal.classList.add("modal_is-opened");
-  nameInput.value = profileName.textContent;
-  descriptionInput.value = profileDescription.textContent;
-});
-
-closeEditProfileModal.addEventListener("click", function () {
-  editProfileModal.classList.remove("modal_is-opened");
-});
-
-profileAddBtn.addEventListener("click", function () {
-  newPostModal.classList.add("modal_is-opened");
-});
-
+// New Post Close Button
 closeNewPostModal.addEventListener("click", function () {
-  newPostModal.classList.remove("modal_is-opened");
+  closeModal(newPostModal);
 });
