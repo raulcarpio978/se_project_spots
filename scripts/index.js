@@ -1,31 +1,29 @@
 const profileEditBtn = document.querySelector(".profile__edit-btn");
 const profileAddBtn = document.querySelector(".profile__add-btn");
+const closeBtns = document.querySelectorAll(".modal__close-btn");
+const modals = document.querySelectorAll(".modal");
 
-// Modals
-const editProfileModal = document.querySelector("#edit-profile-modal");
-const newPostModal = document.querySelector("#new-post-modal");
+const editProfileModal = modals[0];
+const newPostModal = modals[1];
 
-// Close Buttons
-const closeEditProfileModal =
-  editProfileModal.querySelector(".modal__close-btn");
-const closeNewPostModal = newPostModal.querySelector(".modal__close-btn");
+const closeEditProfileModal = closeBtns[0];
+const closeNewPostModal = closeBtns[1];
 
-// Profile Elements
+// Profile Elements & Scoped Inputs/Forms
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
 
-// Forms and Scoped Inputs
 const profileFormElement = editProfileModal.querySelector(".modal__form");
-const profileInputs = profileFormElement.querySelectorAll(".modal__input");
-const nameInput = profileInputs[0];
-const descriptionInput = profileInputs[1];
+const editModalInputs = editProfileModal.querySelectorAll(".modal__input");
+const nameInput = editModalInputs[0];
+const descriptionInput = editModalInputs[1];
 
 const newPostFormElement = newPostModal.querySelector(".modal__form");
-const newPostInputs = newPostFormElement.querySelectorAll(".modal__input");
-const imageInput = newPostInputs[0];
-const captionInput = newPostInputs[1];
+const postModalInputs = newPostModal.querySelectorAll(".modal__input");
+const imageInput = postModalInputs[0];
+const captionInput = postModalInputs[1];
 
-// Centralized helper functions for modals
+// Centralized Modal Helpers
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
 }
