@@ -62,6 +62,7 @@ newPostFormElement.addEventListener("submit", function (evt) {
   evt.preventDefault();
   console.log(imageInput.value);
   console.log(captionInput.value);
+  newPostFormElement.reset();
   closeModal(newPostModal);
 });
 
